@@ -3,9 +3,9 @@ public class Phone extends SmartDevices{
     private int numberOfSim;
     private boolean microSdAvailability;
 
-    Phone(int newSum, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM,
+    Phone(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM,
           int newSim, boolean newMicroSd){
-        super(newSum, newDiagonal, newVendor, newModel, newOs, newRAM);
+        super(newType, newPrice, newDiagonal, newVendor, newModel, newOs, newRAM);
         this.numberOfSim = newSim;
         this.microSdAvailability = newMicroSd;
     }
@@ -24,5 +24,11 @@ public class Phone extends SmartDevices{
 
     public boolean isMicroSdAvailability() {
         return microSdAvailability;
+    }
+
+    @Override
+    public void display() {
+        super.display();
+        System.out.println("\t\t Number of Sim = " + this.numberOfSim + "\t\t MicroSD Availability = " + this.microSdAvailability);
     }
 }

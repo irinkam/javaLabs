@@ -4,9 +4,9 @@ public class SmartWatch extends SmartDevices {
     private boolean stepCounter;
     private boolean pressureCounter;
 
-    SmartWatch(int newSum, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM,
+    SmartWatch(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM,
                 boolean newSleep, boolean newStep, boolean newPressure){
-        super(newSum, newDiagonal, newVendor, newModel, newOs, newRAM);
+        super(newType, newPrice, newDiagonal, newVendor, newModel, newOs, newRAM);
         this.sleepTimer = newSleep;
         this.stepCounter = newStep;
         this.pressureCounter = newPressure;
@@ -34,5 +34,12 @@ public class SmartWatch extends SmartDevices {
 
     public boolean isPressureCounter() {
         return pressureCounter;
+    }
+
+    @Override
+    public void display() {
+        super.display();
+        System.out.println("\t\t Pressure = " + this.pressureCounter + "\t\t Step Counter = " + this.stepCounter +
+                "\t\t Sleep Timer = " + this.sleepTimer );
     }
 }

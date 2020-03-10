@@ -2,8 +2,8 @@ public class SmartDevices extends Electronic{
     private String os;
     private int RAM;
 
-    SmartDevices(int newSum, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM) {
-        super(newSum, newDiagonal, newVendor, newModel);
+    SmartDevices(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM) {
+        super(newType, newPrice, newDiagonal, newVendor, newModel);
         this.os = newOs;
         this.RAM = newRAM;
     }
@@ -22,5 +22,11 @@ public class SmartDevices extends Electronic{
 
     public void setRAM(int RAM) {
         this.RAM = RAM;
+    }
+
+    @Override
+    public void display() {
+        super.display();
+        System.out.print("\t\t OS = " + this.os + "\t\t RAM = " + this.RAM + "Gb");
     }
 }
