@@ -25,11 +25,11 @@ public class Electronic {
         this.type = type;
     }
 
-    public int getSum() {
+    public int getPrice() {
         return price;
     }
 
-    public void setSum(int price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
