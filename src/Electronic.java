@@ -1,12 +1,14 @@
 import java.text.DecimalFormat;
 
-public class Electronic {
+public abstract class Electronic {
 
     private String type;
     private int price;
     private double diagonal;
     private String vendor;
     private String model;
+
+    Electronic () {}
 
     Electronic (String newType, int newPrice, double newDiagonal, String newVendor, String newModel)
     {
@@ -56,6 +58,8 @@ public class Electronic {
     public void setModel(String model) {
         this.model = model;
     }
+
+    public abstract int cost(); // для декораторов
 
     public void display() {
         // ДЛЯ КРАСИВОГО ФОРМАТИРОВАНИЯ

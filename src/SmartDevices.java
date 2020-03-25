@@ -2,6 +2,11 @@ public class SmartDevices extends Electronic{
     private String os;
     private int RAM;
 
+    public int cost()
+    {
+        return super.getPrice();
+    }
+
     SmartDevices(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM) {
         super(newType, newPrice, newDiagonal, newVendor, newModel);
         this.os = newOs;

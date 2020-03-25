@@ -51,5 +51,27 @@ public class Main {
             currentElectronic = electronicList.get(i);
             currentElectronic.display();
         }
+
+        for (int i = 0; i < 10; i++) {
+            currentElectronic = electronicList.get(i);
+            switch (currentElectronic.getType())
+            {
+                case ("Notebook"):
+                    currentElectronic = new Charger(currentElectronic);
+                    break;
+                case ("Phone"):
+                    currentElectronic = new Charger(currentElectronic);
+                    currentElectronic = new Headphones(currentElectronic);
+                    break;
+                case("SmartWatch"):
+                    currentElectronic = new Charger(currentElectronic);
+                    break;
+                case("TV"):
+                    currentElectronic = new RemoteController(currentElectronic);
+                    break;
+            }
+            System.out.println(currentElectronic.cost());
+            System.out.println(currentElectronic.getType());
+        }
     }
 }

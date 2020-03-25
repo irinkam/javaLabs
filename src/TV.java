@@ -10,6 +10,11 @@ public class TV extends Electronic {
         this.displayFormat = newFormat;
     }
 
+    public int cost()
+    {
+        return super.getPrice();
+    }
+
     public void setDisplayFormat(String displayFormat) {
         this.displayFormat = displayFormat;
     }
