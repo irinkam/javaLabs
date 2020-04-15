@@ -1,4 +1,4 @@
-public class Charger extends EquipmentDecorator { // конкретный декоратор зарядное устройство
+public class Charger extends EquipmentDecorator{ // конкретный декоратор зарядное устройство
     Electronic electronic;
 
     public Charger (Electronic electronic)

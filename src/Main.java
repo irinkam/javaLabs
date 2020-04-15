@@ -10,6 +10,8 @@ public class Main {
         String[] vendors = new String[]{"Samsung", "Lg", "Asus", "Lenovo"};
         String[] models = new String[]{"XL055", "XS564", "M-K23", "P P34", "RT-420"};
 
+        ElectronicFactory electronicFactory = new ElectronicFactory();
+
         for (int i = 0; i < 10; i++) {
             int a = (int) (Math.random() * 4); // рандом типа устройства
             String type = types[a]; // определеем тип устройства
@@ -21,19 +23,20 @@ public class Main {
                 case 0:
                     price = (int) (12000 + Math.random() * 60000); // рандом цены
                     diagonal = 15 + Math.random() * 5; // рандом диагонали
-                    Notebook note = new Notebook(type, price, diagonal, vendors[v], models[k], "Windows 10", 16, true);
+                    electronicFactory.createElectronic("Notebook");
+                    Notebook note = new Notebook(type, price, diagonal, vendors[v], models[k], "Windows 10", true);
                     electronicList.add(note);
                     break;
                 case 1:
                     price = (int) (5000 + Math.random() * 20000);
                     diagonal = 15 + Math.random() * 5;
-                    Phone phone = new Phone(type, price, diagonal, vendors[v], models[k], "Android " + (int)(4 + Math.random() * 6), 8, 2, true);
+                    Phone phone = new Phone(type, price, diagonal, vendors[v], models[k], "Android " + (int)(4 + Math.random() * 6), 2, true);
                     electronicList.add(phone);
                     break;
                 case 2:
                     price = (int) (1000 + Math.random() * 3000);
                     diagonal = 0.4 + Math.random() * 1.8;
-                    SmartWatch smartWatch = new SmartWatch(type, price, diagonal, vendors[v], models[k], "Android Wear", 8, true, true, false);
+                    SmartWatch smartWatch = new SmartWatch(type, price, diagonal, vendors[v], models[k], "Android Wear", true, true, false);
                     electronicList.add(smartWatch);
                     break;
                 case 3:
@@ -51,13 +54,14 @@ public class Main {
             currentElectronic = electronicList.get(i);
             currentElectronic.display();
         }
-
+        // декорация
         for (int i = 0; i < 10; i++) {
             currentElectronic = electronicList.get(i);
             switch (currentElectronic.getType())
             {
                 case ("Notebook"):
-                    currentElectronic = new Charger(currentElectronic);
+                    currentElectronic = new RAM(currentElectronic, 4, 1200);
+                    currentElectronic = new GraphicsCard(currentElectronic, "GeForce GTX 1020", 12300);
                     break;
                 case ("Phone"):
                     currentElectronic = new Charger(currentElectronic);

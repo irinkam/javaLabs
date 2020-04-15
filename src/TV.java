@@ -10,6 +10,8 @@ public class TV extends Electronic {
         this.displayFormat = newFormat;
     }
 
+    TV(){}
+
     public int cost()
     {
         return super.getPrice();

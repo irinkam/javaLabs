@@ -4,13 +4,15 @@ public class SmartWatch extends SmartDevices {
     private boolean stepCounter;
     private boolean pressureCounter;
 
-    SmartWatch(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs, int newRAM,
+    SmartWatch(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs,
                 boolean newSleep, boolean newStep, boolean newPressure){
-        super(newType, newPrice, newDiagonal, newVendor, newModel, newOs, newRAM);
+        super(newType, newPrice, newDiagonal, newVendor, newModel, newOs);
         this.sleepTimer = newSleep;
         this.stepCounter = newStep;
         this.pressureCounter = newPressure;
     }
+
+    SmartWatch(){}
 
     public void setSleepTimer(boolean sleepTimer) {
         this.sleepTimer = sleepTimer;

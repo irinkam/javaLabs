@@ -85,4 +85,8 @@ public abstract class Electronic {
                 + diagTab + "Vendor = " + this.vendor + modTab + "Model = " + this.model);
 
     }
+
+    public void assemble(){} // сборка электроники
+
+    public void box(){} // упаковка электроники
 }
