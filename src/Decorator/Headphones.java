@@ -1,3 +1,8 @@
+package Decorator;
+
+import ClassHierarchy.Electronic;
+import Decorator.EquipmentDecorator;
+
 public class Headphones extends EquipmentDecorator { // конкретный декоратор наушники
     Electronic electronic;
 

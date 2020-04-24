@@ -1,4 +1,9 @@
-public class RemoteController extends EquipmentDecorator{ // конкретный декоратор пульт ДУ
+package Decorator;
+
+import ClassHierarchy.Electronic;
+import Decorator.EquipmentDecorator;
+
+public class RemoteController extends EquipmentDecorator { // конкретный декоратор пульт ДУ
     Electronic electronic;
 
     public RemoteController  (Electronic electronic)

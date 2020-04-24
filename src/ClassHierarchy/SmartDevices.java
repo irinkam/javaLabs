@@ -1,4 +1,8 @@
-public class SmartDevices extends Electronic{
+package ClassHierarchy;
+
+import ClassHierarchy.Electronic;
+
+public class SmartDevices extends Electronic {
     private String os;
 
     public int cost()

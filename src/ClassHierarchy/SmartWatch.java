@@ -1,11 +1,15 @@
+package ClassHierarchy;
+
+import ClassHierarchy.SmartDevices;
+
 public class SmartWatch extends SmartDevices {
 
     private boolean sleepTimer;
     private boolean stepCounter;
     private boolean pressureCounter;
 
-    SmartWatch(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs,
-                boolean newSleep, boolean newStep, boolean newPressure){
+    public SmartWatch(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs,
+                      boolean newSleep, boolean newStep, boolean newPressure){
         super(newType, newPrice, newDiagonal, newVendor, newModel, newOs);
         this.sleepTimer = newSleep;
         this.stepCounter = newStep;

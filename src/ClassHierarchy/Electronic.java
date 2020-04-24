@@ -1,3 +1,5 @@
+package ClassHierarchy;
+
 import java.text.DecimalFormat;
 
 public abstract class Electronic {
@@ -8,10 +10,9 @@ public abstract class Electronic {
     private String vendor;
     private String model;
 
-    Electronic () {}
+    public Electronic() { }
 
-    Electronic (String newType, int newPrice, double newDiagonal, String newVendor, String newModel)
-    {
+    Electronic(String newType, int newPrice, double newDiagonal, String newVendor, String newModel) {
         this.type = newType;
         this.price = newPrice;
         this.diagonal = newDiagonal;
@@ -23,40 +24,20 @@ public abstract class Electronic {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public int getPrice() {
         return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public double getDiagonal() {
         return diagonal;
     }
 
-    public void setDiagonal(int diagonal) {
-        this.diagonal = diagonal;
-    }
-
     public String getVendor() {
         return vendor;
     }
 
-    public void setVendor(String vendor) {
-        this.vendor = vendor;
-    }
-
     public String getModel() {
         return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 
     public abstract int cost(); // для декораторов
@@ -65,9 +46,9 @@ public abstract class Electronic {
         // ДЛЯ КРАСИВОГО ФОРМАТИРОВАНИЯ
         DecimalFormat df = new DecimalFormat("0.0");
         String tab = "\t\t";
-        if (type.equals("TV"))
+        if (type.equals("ClassHierarchy.TV"))
             tab = "\t\t\t";
-        else if (type.equals("SmartWatch"))
+        else if (type.equals("ClassHierarchy.SmartWatch"))
             tab = "\t";
         String priceTab = "\t\t";
         if (this.price < 10000)
@@ -86,7 +67,10 @@ public abstract class Electronic {
 
     }
 
-    public void assemble(){} // сборка электроники
+    // для фабрики
+    public void assemble() {
+    } // сборка электроники
 
-    public void box(){} // упаковка электроники
+    public void box() {
+    } // упаковка электроники
 }

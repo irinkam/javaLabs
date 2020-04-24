@@ -1,9 +1,13 @@
+package ClassHierarchy;
+
+import ClassHierarchy.Electronic;
+
 public class TV extends Electronic {
 
     private int viewingAngle;
     private String displayFormat;
 
-    TV(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, int newAngle, String newFormat)
+    public TV(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, int newAngle, String newFormat)
     {
         super(newType, newPrice, newDiagonal, newVendor, newModel);
         this.viewingAngle = newAngle;

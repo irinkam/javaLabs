@@ -1,4 +1,8 @@
-public class Charger extends EquipmentDecorator{ // конкретный декоратор зарядное устройство
+package Decorator;
+
+import ClassHierarchy.Electronic;
+
+public class Charger extends EquipmentDecorator { // конкретный декоратор зарядное устройство
     Electronic electronic;
 
     public Charger (Electronic electronic)

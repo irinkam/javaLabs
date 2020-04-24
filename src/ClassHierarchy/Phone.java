@@ -1,10 +1,12 @@
-public class Phone extends SmartDevices{
+package ClassHierarchy;
+
+public class Phone extends SmartDevices {
 
     private int numberOfSim;
     private boolean microSdAvailability;
 
-    Phone(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs,
-          int newSim, boolean newMicroSd){
+    public Phone(String newType, int newPrice, double newDiagonal, String newVendor, String newModel, String newOs,
+                 int newSim, boolean newMicroSd){
         super(newType, newPrice, newDiagonal, newVendor, newModel, newOs);
         this.numberOfSim = newSim;
         this.microSdAvailability = newMicroSd;

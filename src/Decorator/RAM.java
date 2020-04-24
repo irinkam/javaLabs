@@ -1,3 +1,8 @@
+package Decorator;
+
+import ClassHierarchy.Electronic;
+import Decorator.EquipmentDecorator;
+
 public class RAM extends EquipmentDecorator { // конкретный декоратор оперативная память
         Electronic electronic;
         int size;

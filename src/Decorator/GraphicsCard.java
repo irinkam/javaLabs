@@ -1,3 +1,8 @@
+package Decorator;
+
+import ClassHierarchy.Electronic;
+import Decorator.EquipmentDecorator;
+
 public class GraphicsCard extends EquipmentDecorator {//конкретный декоратор видеокарта
     Electronic electronic;
     String name;

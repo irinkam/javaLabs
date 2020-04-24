@@ -1,3 +1,6 @@
+import ClassHierarchy.*;
+import Decorator.*;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -10,7 +13,6 @@ public class Main {
         String[] vendors = new String[]{"Samsung", "Lg", "Asus", "Lenovo"};
         String[] models = new String[]{"XL055", "XS564", "M-K23", "P P34", "RT-420"};
 
-        ElectronicFactory electronicFactory = new ElectronicFactory();
 
         for (int i = 0; i < 10; i++) {
             int a = (int) (Math.random() * 4); // рандом типа устройства
@@ -23,7 +25,6 @@ public class Main {
                 case 0:
                     price = (int) (12000 + Math.random() * 60000); // рандом цены
                     diagonal = 15 + Math.random() * 5; // рандом диагонали
-                    electronicFactory.createElectronic("Notebook");
                     Notebook note = new Notebook(type, price, diagonal, vendors[v], models[k], "Windows 10", true);
                     electronicList.add(note);
                     break;
@@ -49,6 +50,7 @@ public class Main {
                     throw new IllegalStateException("Unexpected value: " + a);
             }
         }
+
         Electronic currentElectronic;
         for (int i = 0; i < 10; i++) {
             currentElectronic = electronicList.get(i);
