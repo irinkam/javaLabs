@@ -11,11 +11,14 @@ public class ElectronicStore {
         this.electronicFactory = electronicFactory;
     }
 
+    public ElectronicStore() {
+    }
+
     public Electronic orderElectronic(String type)
     {
         Electronic electronic = electronicFactory.createElectronic(type);
-        electronic.assemble();
-        electronic.box();
+        //electronic.assemble();
+        //electronic.box();
 
         System.out.println(type + " is ready!");
         return electronic;
