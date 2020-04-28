@@ -2,7 +2,7 @@ package Factory;
 
 import ClassHierarchy.*;
 
-public class SimpleElectronicFactory {
+public class LuxuryElectronicFactory extends ElectronicStore{
 
     public Electronic createElectronic(String type)
     {

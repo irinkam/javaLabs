@@ -1,7 +1,7 @@
 import ClassHierarchy.*;
 import Decorator.*;
 import Factory.ElectronicStore;
-import Factory.SimpleElectronicFactory;
+import Factory.LuxuryElectronicFactory;
 
 import java.util.ArrayList;
 
@@ -20,8 +20,8 @@ public class Main {
             int a = (int) (Math.random() * 4); // рандом типа устройства
             String type = types[a]; // определяем тип устройства
 
-            SimpleElectronicFactory electronicFactory = new SimpleElectronicFactory();
-            ElectronicStore electronicStore = new ElectronicStore(electronicFactory);
+            ElectronicStore electronicStore;
+            electronicStore = new LuxuryElectronicFactory();
             Electronic electronic;
 
             switch (a) {

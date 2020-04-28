@@ -69,8 +69,10 @@ public abstract class Electronic {
 
     // для фабрики
     public void assemble() {
+        System.out.println("Assembling...");
     } // сборка электроники
 
     public void box() {
+        System.out.println("Boxed...");
     } // упаковка электроники
 }
