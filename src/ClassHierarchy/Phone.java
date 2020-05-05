@@ -12,7 +12,7 @@ public class Phone extends SmartDevices {
         this.microSdAvailability = newMicroSd;
     }
 
-    Phone(){}
+    public Phone(){}
 
     public int getNumberOfSim() {
         return numberOfSim;

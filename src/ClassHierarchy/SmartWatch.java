@@ -16,7 +16,7 @@ public class SmartWatch extends SmartDevices {
         this.pressureCounter = newPressure;
     }
 
-    SmartWatch(){}
+    public SmartWatch(){}
 
     public void setSleepTimer(boolean sleepTimer) {
         this.sleepTimer = sleepTimer;

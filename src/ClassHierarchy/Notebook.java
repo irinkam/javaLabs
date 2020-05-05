@@ -10,7 +10,7 @@ public class Notebook extends SmartDevices {
         this.cdAvailability = newCd;
     }
 
-    Notebook(){}
+    public Notebook(){}
 
     public boolean isCdAvailability() {
         return cdAvailability;

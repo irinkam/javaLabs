@@ -46,9 +46,9 @@ public abstract class Electronic {
         // ДЛЯ КРАСИВОГО ФОРМАТИРОВАНИЯ
         DecimalFormat df = new DecimalFormat("0.0");
         String tab = "\t\t";
-        if (type.equals("ClassHierarchy.TV"))
+        if (type.equals("TV"))
             tab = "\t\t\t";
-        else if (type.equals("ClassHierarchy.SmartWatch"))
+        else if (type.equals("SmartWatch"))
             tab = "\t";
         String priceTab = "\t\t";
         if (this.price < 10000)

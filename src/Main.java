@@ -1,7 +1,10 @@
+import AbstractFactory.ElectronicFactory;
+import AbstractFactory.LGFactory;
+import AbstractFactory.SamsungFactory;
 import ClassHierarchy.*;
 import Decorator.*;
-import Factory.ElectronicStore;
-import Factory.LuxuryElectronicFactory;
+import FactoryMethod.ElectronicStore;
+import FactoryMethod.SamsungElectronicFactory;
 
 import java.util.ArrayList;
 
@@ -21,7 +24,7 @@ public class Main {
             String type = types[a]; // определяем тип устройства
 
             ElectronicStore electronicStore;
-            electronicStore = new LuxuryElectronicFactory();
+            electronicStore = new SamsungElectronicFactory();
             Electronic electronic;
 
             switch (a) {
@@ -74,5 +77,15 @@ public class Main {
             System.out.print(currentElectronic.getType());
             System.out.println(", " + currentElectronic.cost() + " rub.");
         }
+
+        System.out.println("\n**********ABSTRACT FACTORY**********\n");
+        ElectronicFactory electronicFactory;
+        electronicFactory = new SamsungFactory();
+        Notebook notebook = electronicFactory.createNotebook();
+        notebook.display();
+
+        electronicFactory = new LGFactory();
+        Phone phone = electronicFactory.createPhone();
+        phone.display();
     }
 }

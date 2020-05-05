@@ -14,7 +14,7 @@ public class TV extends Electronic {
         this.displayFormat = newFormat;
     }
 
-    TV(){}
+    public TV(){}
 
     public int cost()
     {
