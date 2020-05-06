@@ -24,20 +24,41 @@ public abstract class Electronic {
         return type;
     }
 
+    public void setType(String type)
+    {
+        this.type = type;
+    }
+
     public int getPrice() {
         return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public double getDiagonal() {
         return diagonal;
     }
 
+    public void setDiagonal(double diagonal) {
+        this.diagonal = diagonal;
+    }
+
     public String getVendor() {
         return vendor;
     }
 
+    public void setVendor(String vendor) {
+        this.vendor = vendor;
+    }
+
     public String getModel() {
         return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public abstract int cost(); // для декораторов

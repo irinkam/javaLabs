@@ -16,6 +16,10 @@ public class Notebook extends SmartDevices {
         return cdAvailability;
     }
 
+    public void setCdAvailability(boolean cdAvailability) {
+        this.cdAvailability = cdAvailability;
+    }
+
     @Override
     public void display()
     {

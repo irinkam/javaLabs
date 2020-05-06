@@ -11,9 +11,13 @@ import Decorator.RAM;
 public class SamsungFactory implements ElectronicFactory {
     @Override
     public Notebook createNotebook() {
-        Notebook note = new SamsungNotebook("Notebook", 205000, 15, "Samsung", "XXS-MD 15", "Windows 10", true);
-        //note = new RAM(note, 4, 500);
-        return note;
+        return new SamsungNotebook.Builder()
+                .diagonal(17)
+                .model("XLL-5")
+                .price(355000)
+                .os("Windows 10")
+                .cd(true)
+                .build();
     }
 
     @Override

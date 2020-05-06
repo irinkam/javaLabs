@@ -6,12 +6,25 @@ import ClassHierarchy.*;
 public class LGFactory implements ElectronicFactory {
     @Override
     public Notebook createNotebook() {
-        return new LGNotebook("Notebook", 205000, 15, "LG", "XXS-MD 15", "Windows 10", true);
+        return new LGNotebook.Builder()
+                .diagonal(15)
+                .model("XXS-MD")
+                .price(205000)
+                .os("Windows 10")
+                .cd(true)
+                .build();
     }
 
     @Override
     public Phone createPhone() {
-        return new LGPhone("Phone", 8000, 5, "LG", "Zenfone 3", "Android 8", 2, true);
+        return new LGPhone.Builder()
+                .price(8000)
+                .diagonal(5)
+                .model("Zen 3")
+                .os("Android 8")
+                .sim(2)
+                .microSd(true)
+                .build();
     }
 
     @Override
