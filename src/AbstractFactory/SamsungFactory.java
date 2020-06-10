@@ -14,7 +14,7 @@ public class SamsungFactory implements ElectronicFactory {
         return new SamsungNotebook.Builder()
                 .diagonal(17)
                 .model("XLL-5")
-                .price(355000)
+                .price(35500)
                 .os("Windows 10")
                 .cd(true)
                 .build();

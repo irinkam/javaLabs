@@ -3,12 +3,21 @@ import AbstractFactory.LGFactory;
 import AbstractFactory.SamsungFactory;
 import ClassHierarchy.*;
 import Decorator.*;
+import Iterator.*;
 import FactoryMethod.ElectronicStore;
 import FactoryMethod.SamsungElectronicFactory;
 
 import java.util.ArrayList;
 
 public class Main {
+
+    public static void printElectronic(Iterator iterator)
+    {
+        while (iterator.hasNext()) {
+            Electronic next = (Electronic)iterator.next();
+            next.display();
+        }
+    }
 
     public static void main(String args[]) {
         ArrayList<Electronic> electronicList = new ArrayList<>();
@@ -87,5 +96,21 @@ public class Main {
         electronicFactory = new LGFactory();
         Phone phone = electronicFactory.createPhone();
         phone.display();
+
+        System.out.println("\n**********ITERATOR**********\n");
+        PhoneWarehous phoneWarehous = new PhoneWarehous();
+        NotebookWarehous notebookWarehous = new NotebookWarehous();
+        SmartWatchWarehous smartWatchWarehous = new SmartWatchWarehous();
+
+        Iterator phoneIterator = phoneWarehous.createIterator();
+        Iterator notebookIterator = notebookWarehous.createIterator();
+        Iterator smartWatchIterator = smartWatchWarehous.createIterator();
+
+        System.out.println("-------Phones-------");
+        printElectronic(phoneIterator);
+        System.out.println("-------Notebooks-------");
+        printElectronic(notebookIterator);
+        System.out.println("-------Smart watch-------");
+        printElectronic(smartWatchIterator);
     }
 }

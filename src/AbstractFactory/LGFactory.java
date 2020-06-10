@@ -9,7 +9,7 @@ public class LGFactory implements ElectronicFactory {
         return new LGNotebook.Builder()
                 .diagonal(15)
                 .model("XXS-MD")
-                .price(205000)
+                .price(20500)
                 .os("Windows 10")
                 .cd(true)
                 .build();

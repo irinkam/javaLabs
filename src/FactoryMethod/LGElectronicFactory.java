@@ -9,7 +9,7 @@ public class LGElectronicFactory extends ElectronicStore {
         Electronic electronic = null;
 
         if (type.equals("Notebook")) {
-            electronic = new Notebook("Notebook", 205000, 15, "LG", "XXS-MD 15", "Windows 10", true);
+            electronic = new Notebook("Notebook", 20500, 15, "LG", "XXS-MD 15", "Windows 10", true);
         }
         else if (type.equals("Phone")) {
             electronic = new Phone("Phone", 8000, 5, "LG", "Zenfone 3", "Android 8", 2, true);
